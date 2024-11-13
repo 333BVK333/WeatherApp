@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+    <div class="container">
+        <div class="navbar">
+            <input type="text" id="search" placeholder="Enter City Name ..." />
+            <img src="imgs/search.svg" id="find" />
+        </div>
+        <img src="imgs/cloudy.png" class="image" id="img`" /> 
+        <div class="title" id="degree" ></div>
+        <div class="city" id="place" ></div>
+        <div class="sides">
+            <div class="left">
+                <img src="imgs/humidity.svg" class="logo" />
+                <div class="content">
+                    <div class="style" id="humidity"></div>
+                    <div class="style">Humadity</div>
+                </div>
+            </div>
+            <div class="right">
+                <img src="imgs/air.svg" class="logo" />
+                <div class="content">
+                    <div class="style" id="wind"></div>
+                    <div class="style">Wind Speed</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js" ></script>
+</html>
