@@ -14,8 +14,15 @@ find.addEventListener("click", async () => {
     let data = await res.json();
     if (data.cod == 200) {
       degree.innerText = Math.ceil(data.main.temp - 273) + "°C";
-      place.innerText =
-        value.toLowerCase().charAt(0).toUpperCase() + value.slice(1);
+
+      function titleCase(str) {
+        return str.toLowerCase().split(' ').map(function(word) {
+          return (word.charAt(0).toUpperCase() + word.slice(1));
+        }).join(' ');
+      }
+
+      place.innerText = titleCase(value);
+        // value.toLowerCase().charAt(0).toUpperCase() + value.slice(1);
       humidity.innerText = `${data.main.humidity} %`;
       wind.innerText = Math.floor(data.wind.speed) + " km/hr";
       let check = data.weather[0].main.toLowerCase();
